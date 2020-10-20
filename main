@@ -1,0 +1,483 @@
+on join:
+	if {abtl} is true:
+		wait 3 ticks
+		chance of 20%:
+			open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &cRED" to player
+			set {incaptcha.%player%} to true
+			send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+			format gui slot 2 of player with red wool named "Click me!" to run:
+				close player's inventory
+				send "&8[&aThe&fLate&8] &9Captcha completed!"
+				set {incaptcha.%player%} to false
+			format gui slot 3 of player with green wool named "Dont click me!" to run:
+				close player's inventory
+				execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%player%} to false
+			format gui slot 4 of player with blue wool named "Dont click me!" to run:
+				close player's inventory
+				execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%player%} to false				
+			format gui slot 5 of player with orange wool named "Dont click me!" to run:
+				close player's inventory
+				execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%player%} to false				
+			format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+				close player's inventory
+				execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%player%} to false
+		else:
+			chance of 20%:
+				set {incaptcha.%player%} to true
+				send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+				open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &9BLUE" to player
+				format gui slot 2 of player with red wool named "Dont click me!" to run:
+					close player's inventory
+					execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%player%} to false
+				format gui slot 3 of player with green wool named "Dont click me!" to run:
+					close player's inventory
+					execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%player%} to false
+				format gui slot 4 of player with blue wool named "Click me!" to run:
+					close player's inventory
+					send "&8[&aThe&fLate&8] &9Captcha completed!"
+					set {incaptcha.%player%} to false				
+				format gui slot 5 of player with orange wool named "Dont click me!" to run:
+					close player's inventory
+					execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%player%} to false				
+				format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+					close player's inventory
+					execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%player%} to false
+			else:
+				chance of 20%:
+					set {incaptcha.%player%} to true
+					send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+					open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &eYELLOW" to player
+					format gui slot 2 of player with red wool named "Dont click me!" to run:
+						close player's inventory
+						execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%player%} to false
+					format gui slot 3 of player with green wool named "Dont click me!" to run:
+						close player's inventory
+						execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%player%} to false
+					format gui slot 4 of player with blue wool named "Dont click me!" to run:
+						close player's inventory
+						execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%player%} to false				
+					format gui slot 5 of player with orange wool named "Dont click me!" to run:
+						close player's inventory
+						execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%player%} to false				
+					format gui slot 6 of player with yellow wool named "Click me!" to run:
+						close player's inventory
+						send "&8[&aThe&fLate&8] &9Captcha completed!"
+						set {incaptcha.%player%} to false
+				else:
+					chance of 20%:
+						set {incaptcha.%player%} to true
+						send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+						open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &6ORANGE" to player
+						format gui slot 2 of player with red wool named "Dont click me!" to run:
+							close player's inventory
+							execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%player%} to false
+						format gui slot 3 of player with green wool named "Dont click me!" to run:
+							close player's inventory
+							execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%player%} to false
+						format gui slot 4 of player with blue wool named "Dont click me!" to run:
+							close player's inventory
+							execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%player%} to false				
+						format gui slot 5 of player with orange wool named "Click me!" to run:
+							close player's inventory
+							send "&8[&aThe&fLate&8] &9Captcha completed!"
+							set {incaptcha.%player%} to false				
+						format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+							close player's inventory
+							execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%player%} to false
+					else:
+						chance of 20%:
+							set {incaptcha.%player%} to true
+							send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+							open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &aGREEN" to player
+							format gui slot 2 of player with red wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false
+							format gui slot 3 of player with green wool named "Click me!" to run:
+								close player's inventory
+								send "&8[&aThe&fLate&8] &9Captcha completed!"
+								set {incaptcha.%player%} to false
+							format gui slot 4 of player with blue wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 5 of player with orange wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false
+						else:
+							set {incaptcha.%player%} to true
+							send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+							open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &aGREEN" to player
+							format gui slot 2 of player with red wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false
+							format gui slot 3 of player with green wool named "Click me!" to run:
+								close player's inventory
+								send "&8[&aThe&fLate&8] &9Captcha completed!"
+								set {incaptcha.%player%} to false
+							format gui slot 4 of player with blue wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 5 of player with orange wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false							
+																												
+	
+
+
+on inventory close:
+	wait 3 ticks
+	if {incaptcha.%player%} is true:
+		chance of 20%:
+			open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &cRED" to player
+			set {incaptcha.%player%} to true
+			send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+			format gui slot 2 of player with red wool named "Click me!" to run:
+				close player's inventory
+				send "&8[&aThe&fLate&8] &9Captcha completed!"
+				set {incaptcha.%player%} to false
+			format gui slot 3 of player with green wool named "Dont click me!" to run:
+				close player's inventory
+				execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%player%} to false
+			format gui slot 4 of player with blue wool named "Dont click me!" to run:
+				close player's inventory
+				execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%player%} to false				
+			format gui slot 5 of player with orange wool named "Dont click me!" to run:
+				close player's inventory
+				execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%player%} to false				
+			format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+				close player's inventory
+				execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%player%} to false
+		else:
+			chance of 20%:
+				set {incaptcha.%player%} to true
+				send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+				open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &9BLUE" to player
+				format gui slot 2 of player with red wool named "Dont click me!" to run:
+					close player's inventory
+					execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%player%} to false
+				format gui slot 3 of player with green wool named "Dont click me!" to run:
+					close player's inventory
+					execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%player%} to false
+				format gui slot 4 of player with blue wool named "Click me!" to run:
+					close player's inventory
+					send "&8[&aThe&fLate&8] &9Captcha completed!"
+					set {incaptcha.%player%} to false				
+				format gui slot 5 of player with orange wool named "Dont click me!" to run:
+					close player's inventory
+					execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%player%} to false				
+				format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+					close player's inventory
+					execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%player%} to false
+			else:
+				chance of 20%:
+					set {incaptcha.%player%} to true
+					send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+					open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &eYELLOW" to player
+					format gui slot 2 of player with red wool named "Dont click me!" to run:
+						close player's inventory
+						execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%player%} to false
+					format gui slot 3 of player with green wool named "Dont click me!" to run:
+						close player's inventory
+						execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%player%} to false
+					format gui slot 4 of player with blue wool named "Dont click me!" to run:
+						close player's inventory
+						execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%player%} to false				
+					format gui slot 5 of player with orange wool named "Dont click me!" to run:
+						close player's inventory
+						execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%player%} to false				
+					format gui slot 6 of player with yellow wool named "Click me!" to run:
+						close player's inventory
+						send "&8[&aThe&fLate&8] &9Captcha completed!"
+						set {incaptcha.%player%} to false
+				else:
+					chance of 20%:
+						set {incaptcha.%player%} to true
+						send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+						open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &6ORANGE" to player
+						format gui slot 2 of player with red wool named "Dont click me!" to run:
+							close player's inventory
+							execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%player%} to false
+						format gui slot 3 of player with green wool named "Dont click me!" to run:
+							close player's inventory
+							execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%player%} to false
+						format gui slot 4 of player with blue wool named "Dont click me!" to run:
+							close player's inventory
+							execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%player%} to false				
+						format gui slot 5 of player with orange wool named "Click me!" to run:
+							close player's inventory
+							send "&8[&aThe&fLate&8] &9Captcha completed!"
+							set {incaptcha.%player%} to false				
+						format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+							close player's inventory
+							execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%player%} to false
+					else:
+						chance of 20%:
+							set {incaptcha.%player%} to true
+							send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+							open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &aGREEN" to player
+							format gui slot 2 of player with red wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false
+							format gui slot 3 of player with green wool named "Click me!" to run:
+								close player's inventory
+								send "&8[&aThe&fLate&8] &9Captcha completed!"
+								set {incaptcha.%player%} to false
+							format gui slot 4 of player with blue wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 5 of player with orange wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false
+						else:
+							set {incaptcha.%player%} to true
+							send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+							open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &aGREEN" to player
+							format gui slot 2 of player with red wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false
+							format gui slot 3 of player with green wool named "Click me!" to run:
+								close player's inventory
+								send "&8[&aThe&fLate&8] &9Captcha completed!"
+								set {incaptcha.%player%} to false
+							format gui slot 4 of player with blue wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 5 of player with orange wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false
+		
+
+on quit:
+	if {incaptcha.%player%} is true:
+		set {incaptcha.%player%} to false
+
+command /tl trigger:
+	trigger:
+		if {abtl} is false:
+			set {abtl} to true
+			send "&8[&aThe&fLate&8] &9Captcha is now set to true! %{abtl}%"
+			stop
+		if {abtl} is true:
+			set {abtl} to false
+			send "&8[&aThe&fLate&8] &9Captcha is now set to false! %{abtl}%"
+			stop
+		if {abtl} is not set:
+			set {abtl} to true
+			send "&8[&aThe&fLate&8] &9Captcha is now set to true! %{abtl}%"
+
+command /dahidaw <player>:
+	trigger:
+		wait 3 ticks
+		chance of 20%:
+			set {incaptcha.%arg-1%} to true
+			send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+			open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &cRED" to arg-1
+			format gui slot 2 of arg-1 with red wool named "Click me!" to run:
+				close arg-1's inventory
+				send "&8[&aThe&fLate&8] &9Captcha completed!"
+				set {incaptcha.%arg-1%} to false
+			format gui slot 3 of arg-1 with green wool named "Dont click me!" to run:
+				close arg-1's inventory
+				execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%arg-1%} to false
+			format gui slot 4 of arg-1 with blue wool named "Dont click me!" to run:
+				close arg-1's inventory
+				execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%arg-1%} to false				
+			format gui slot 5 of arg-1 with orange wool named "Dont click me!" to run:
+				close arg-1's inventory
+				execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%arg-1%} to false				
+			format gui slot 6 of arg-1 with yellow wool named "Dont click me!" to run:
+				close arg-1's inventory
+				execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+				set {incaptcha.%arg-1%} to false
+		else:
+			chance of 20%:
+				set {incaptcha.%arg-1%} to true
+				send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+				open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &9BLUE" to arg-1
+				format gui slot 2 of arg-1 with red wool named "Dont click me!" to run:
+					close arg-1's inventory
+					execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%arg-1%} to false
+				format gui slot 3 of arg-1 with green wool named "Dont click me!" to run:
+					close arg-1's inventory
+					execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%arg-1%} to false
+				format gui slot 4 of arg-1 with blue wool named "Click me!" to run:
+					close arg-1's inventory
+					send "&8[&aThe&fLate&8] &9Captcha completed!"
+					set {incaptcha.%arg-1%} to false				
+				format gui slot 5 of arg-1 with orange wool named "Dont click me!" to run:
+					close arg-1's inventory
+					execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%arg-1%} to false				
+				format gui slot 6 of arg-1 with yellow wool named "Dont click me!" to run:
+					close arg-1's inventory
+					execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+					set {incaptcha.%arg-1%} to false
+			else:
+				chance of 20%:
+					set {incaptcha.%arg-1%} to true
+					send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+					open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &eYELLOW" to arg-1
+					format gui slot 2 of arg-1 with red wool named "Dont click me!" to run:
+						close arg-1's inventory
+						execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%arg-1%} to false
+					format gui slot 3 of arg-1 with green wool named "Dont click me!" to run:
+						close arg-1's inventory
+						execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%arg-1%} to false
+					format gui slot 4 of arg-1 with blue wool named "Dont click me!" to run:
+						close arg-1's inventory
+						execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%arg-1%} to false				
+					format gui slot 5 of arg-1 with orange wool named "Dont click me!" to run:
+						close arg-1's inventory
+						execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+						set {incaptcha.%arg-1%} to false				
+					format gui slot 6 of arg-1 with yellow wool named "Click me!" to run:
+						close arg-1's inventory
+						send "&8[&aThe&fLate&8] &9Captcha completed!"
+						set {incaptcha.%arg-1%} to false
+				else:
+					chance of 20%:
+						set {incaptcha.%arg-1%} to true
+						send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+						open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &6ORANGE" to arg-1
+						format gui slot 2 of arg-1 with red wool named "Dont click me!" to run:
+							close arg-1's inventory
+							execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%arg-1%} to false
+						format gui slot 3 of arg-1 with green wool named "Dont click me!" to run:
+							close arg-1's inventory
+							execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%arg-1%} to false
+						format gui slot 4 of arg-1 with blue wool named "Dont click me!" to run:
+							close arg-1's inventory
+							execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%arg-1%} to false				
+						format gui slot 5 of arg-1 with orange wool named "Click me!" to run:
+							close arg-1's inventory
+							send "&8[&aThe&fLate&8] &9Captcha completed!"
+							set {incaptcha.%arg-1%} to false				
+						format gui slot 6 of arg-1 with yellow wool named "Dont click me!" to run:
+							close arg-1's inventory
+							execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+							set {incaptcha.%arg-1%} to false
+					else:
+						chance of 20%:
+							set {incaptcha.%arg-1%} to true
+							send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+							open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &aGREEN" to arg-1
+							format gui slot 2 of arg-1 with red wool named "Dont click me!" to run:
+								close arg-1's inventory
+								execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%arg-1%} to false
+							format gui slot 3 of arg-1 with green wool named "Click me!" to run:
+								close arg-1's inventory
+								send "&8[&aThe&fLate&8] &9Captcha completed!"
+								set {incaptcha.%arg-1%} to false
+							format gui slot 4 of arg-1 with blue wool named "Dont click me!" to run:
+								close arg-1's inventory
+								execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%arg-1%} to false				
+							format gui slot 5 of arg-1 with orange wool named "Dont click me!" to run:
+								close arg-1's inventory
+								execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%arg-1%} to false				
+							format gui slot 6 of arg-1 with yellow wool named "Dont click me!" to run:
+								close arg-1's inventory
+								execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%arg-1%} to false
+						else:
+							set {incaptcha.%arg-1%} to true
+							send "&8[&aThe&fLate&8] &cComplete the captcha in order to continue!"
+							open virtual chest inventory with 1 rows named "&9Captcha--&4&lClick on &aGREEN" to arg-1
+							format gui slot 2 of arg-1 with red wool named "Dont click me!" to run:
+								close arg-1's inventory
+								execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%arg-1%} to false
+							format gui slot 3 of arg-1 with green wool named "Click me!" to run:
+								close arg-1's inventory
+								send "&8[&aThe&fLate&8] &9Captcha completed!"
+								set {incaptcha.%arg-1%} to false
+							format gui slot 4 of player with blue wool named "Dont click me!" to run:
+								close arg-1's inventory
+								execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%arg-1%} to false				
+							format gui slot 5 of arg-1 with orange wool named "Dont click me!" to run:
+								close arg-1's inventory
+								execute console command "/essentials:kick %arg-1% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false				
+							format gui slot 6 of player with yellow wool named "Dont click me!" to run:
+								close player's inventory
+								execute console command "/essentials:kick %player% &8[&aThe&fLate&8] &4Captcha Failed!"
+								set {incaptcha.%player%} to false		
+
+on any movement:
+	if {incaptcha.%player%} is true:
+		cancel event
+
+		
